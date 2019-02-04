@@ -3,6 +3,7 @@
   "version": "0.0.2",
   "description": "Dead simple todo.txt parser",
   "main": "lib/index.js",
+  "repository": {"type": "github", "url": "https://github.com/samkcarlile/todotxt-parser2"},
   "directories": {
     "lib": "lib"
   },

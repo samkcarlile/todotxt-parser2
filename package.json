@@ -1,0 +1,26 @@
+{
+  "name": "todotxt-parser2",
+  "version": "0.0.2",
+  "description": "Dead simple todo.txt parser",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^23.3.13",
+    "@types/node": "^10.12.21",
+    "jest": "^24.0.0",
+    "ts-jest": "^23.10.5",
+    "ts-node": "^8.0.2",
+    "typescript": "^3.3.1"
+  },
+  "scripts": {
+    "prepare": "tsc",
+    "build": "tsc",
+    "test": "jest",
+    "shell": "ts-node"
+  },
+  "author": "Sam Carlile",
+  "license": "MIT"
+}

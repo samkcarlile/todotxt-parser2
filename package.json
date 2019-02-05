@@ -1,6 +1,6 @@
 {
   "name": "todotxt-parser2",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "description": "Dead simple todo.txt parser",
   "main": "lib/index.js",
   "repository": {"type": "github", "url": "https://github.com/samkcarlile/todotxt-parser2"},
@@ -18,7 +18,7 @@
     "typescript": "^3.3.1"
   },
   "scripts": {
-    "prepare": "tsc",
+    "prepare": "npm run build",
     "build": "tsc",
     "test": "jest",
     "shell": "ts-node"

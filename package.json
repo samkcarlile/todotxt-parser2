@@ -1,6 +1,6 @@
 {
   "name": "todotxt-parser2",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Dead simple todo.txt parser",
   "main": "lib/index.js",
   "repository": {

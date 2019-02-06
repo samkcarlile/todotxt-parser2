@@ -119,7 +119,7 @@ export default class Todo {
 }
 
 // Parse a data in the xxxx-xx-xx format
-function parseDate(str: string): Date {
+export function parseDate(str: string): Date {
   let arr = str.split('-').map(s => parseInt(s));
   return new Date(arr[0], arr[1] - 1, arr[2]);
 }

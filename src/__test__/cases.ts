@@ -255,6 +255,20 @@ const examples : [
       contexts: ["@github"]
     }
   ],
+  // With Meta
+  [
+    "(A) do the thing @regularStuff +things due:2019-12-01",
+    {
+      complete: false,
+      priority: 'A',
+      date_completed: undefined,
+      date_created: undefined,
+      body: "do the thing @regularStuff +things",
+      meta: { due: "2019-12-01" },
+      projects: ["+things"],
+      contexts: ["@regularStuff"]
+    }
+  ]
 ];
 
 export default examples;

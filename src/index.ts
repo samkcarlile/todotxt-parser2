@@ -61,17 +61,17 @@ export default class Todo {
 
     let bodyNoMeta = bodyWithMeta;
     let match: RegExpExecArray;
-    while ((match = MetaRegex.exec(bodyWithMeta)) !== null) {
-      if (match.groups && Object.keys(match.groups).every(k => ['value', 'key'].includes(k))) {
+    while ((match = MetaRegex.exec(bodyNoMeta)) !== null) {
+      if (match.groups && match.groups['key'] && match.groups['value']) {
         const k = match.groups.key;
         const v = match.groups.value;
         todo.meta[k] = v;
         // remove this meta tag from body
-        bodyNoMeta.replace(`${k}:${v}`, '');
+        bodyNoMeta = bodyNoMeta.replace(`${k}:${v}`, '');
       }
     }
 
-    todo.body = bodyNoMeta;
+    todo.body = bodyNoMeta.trim();
 
     return todo;
   }
@@ -91,8 +91,8 @@ export default class Todo {
     this.date_created && parts.push(formatDate(this.date_created));
     parts.push(this.body);
 
-    Object.entries(this.meta).forEach(
-      ([key, value]) => parts.push(key + ' ' + value)
+    this.meta && Object.entries(this.meta).forEach(
+      ([key, value]) => parts.push(key + ':' + value)
     );
 
     return parts.join(' ');

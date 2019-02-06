@@ -9,6 +9,7 @@ describe('todo -> string', () => {
     testTodo.date_completed = todo.date_completed;
     testTodo.priority = todo.priority;
     testTodo.complete = todo.complete;
+    testTodo.meta = todo.meta;
     expect(testTodo.toString()).toEqual(str);
   })
 });

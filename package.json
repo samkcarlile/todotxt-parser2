@@ -3,7 +3,10 @@
   "version": "0.0.6",
   "description": "Dead simple todo.txt parser",
   "main": "lib/index.js",
-  "repository": {"type": "github", "url": "https://github.com/samkcarlile/todotxt-parser2"},
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/samkcarlile/todotxt-parser2"
+  },
   "directories": {
     "lib": "lib"
   },
@@ -12,7 +15,7 @@
   "devDependencies": {
     "@types/jest": "^23.3.13",
     "@types/node": "^10.12.21",
-    "jest": "^24.0.0",
+    "jest": "^23.6.0",
     "ts-jest": "^23.10.5",
     "ts-node": "^8.0.2",
     "typescript": "^3.3.1"

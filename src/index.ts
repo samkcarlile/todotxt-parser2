@@ -99,21 +99,21 @@ export default class Todo {
   }
 
   get projects(): string[] {
-    let projects: string[] = [];
+    let projects = new Set<string>();
     let regexArray: RegExpExecArray;
     while ((regexArray = ProjectRegex.exec(this.body)) !== null) {
-      projects.push(regexArray[1]);
+      projects.add(regexArray[1]);
     }
-    return projects;
+    return Array.from(projects);
   }
 
   get contexts(): string[] {
-    let contexts: string[] = [];
+    let contexts = new Set<string>();
     let regexArray: RegExpExecArray;
     while ((regexArray = ContextRegex.exec(this.body)) !== null) {
-      contexts.push(regexArray[1]);
+      contexts.add(regexArray[1]);
     }
-    return contexts;
+    return Array.from(contexts);
   }
 
 }
